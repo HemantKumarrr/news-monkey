@@ -1,0 +1,45 @@
+.news_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.5rem;
+    background: #F9F6EE;
+}
+
+.total_result {
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    padding: 0.8rem 5rem;
+    color: #323232;
+}
+
+.pagination {
+    width: 80%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination > button {
+    width: 8rem;
+    height: 2.5rem;
+    background: #000;
+    color: #F9F6EE;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination > button:active {
+    transform: scale(0.9);
+}
+
+.pagination > button:hover{
+    background: #f01800;
+}
