@@ -1,7 +1,8 @@
+import { Suspense, lazy } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import News from './components/News/News'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import News from './components/News/News'
 
 function App() {
 
