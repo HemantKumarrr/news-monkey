@@ -9,8 +9,10 @@
 .spinner {
   width: 150px;
   height: 150px;
-  --clr: rgb(127, 207, 255);
-  --clr-alpha: rgb(127, 207, 255, .1);
+  /* --clr: rgb(127, 207, 255); */
+  --clr: rgb(244, 66, 66);
+  /* --clr-alpha: rgb(127, 207, 255, .1); */
+  --clr-alpha: rgb(255, 0, 0, .1);
   animation: spinner 2s infinite linear;
   transform-style: preserve-3d;
 }

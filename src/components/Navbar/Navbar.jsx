@@ -10,7 +10,7 @@ const Navbar = () => {
       <nav className={styles.nav_container}>
         <div className={styles.logo}>
           <NavLink to="/" className={styles.logo_name}>
-            News Monkey
+            News <span className={styles.nest_word}>Nest</span>
           </NavLink>
         </div>
         {menuToggle ? (
