@@ -26,41 +26,15 @@ const News = ({ category }) => {
   };
 
   const handlePrevious = async () => {
-    try {
-      setIsLoading(true);
-      let sample = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}&page=${
-          page - 1
-        }`
-      );
-      let result = await sample.json();
-      setTotalResult(result.totalResults);
-      setMyNewsList(result.articles);
-      setIsLoading(false);
-    } catch (err) {
-      console.log(err);
-    }
     let myPage = page - 1;
     setPage(myPage);
+    newsApi()
   };
 
   const handleNext = async () => {
-    try {
-      setIsLoading(true);
-      let sample = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}&page=${
-          page + 1
-        }`
-      );
-      let result = await sample.json();
-      setTotalResult(result.totalResults);
-      setMyNewsList(result.articles);
-      setIsLoading(false);
-    } catch (err) {
-      console.log(err);
-    }
     let myPage = page + 1;
     setPage(myPage);
+    newsApi()
   };
 
   useEffect(() => {
@@ -74,7 +48,7 @@ const News = ({ category }) => {
         {isLoading ? (
           <Loading />
         ) : (
-          myNewsList.map((item) => {
+          myNewsList?.map((item) => {
             return (
               <NewsList
                 key={item.url}

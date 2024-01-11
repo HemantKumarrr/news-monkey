@@ -41,7 +41,3 @@
 .pagination > button:active {
     transform: scale(0.9);
 }
-
-.pagination > button:hover{
-    background: #f01800;
-}
